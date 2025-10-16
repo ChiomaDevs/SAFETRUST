@@ -1,4 +1,13 @@
 
+
+/*:root{
+  --brand-primary: #6436d8;
+  --brand-primary-600: #5830c3;
+  --brand-secondary: #4d2db6;
+  --brand-accent: #ffd54f;
+  --brand-accent-900: #b08500;
+}*/
+
 @import "tailwindcss";
 @plugin "tailwindcss-animate";
 

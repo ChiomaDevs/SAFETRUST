@@ -260,7 +260,7 @@ const StickyNav = () => {
     <div className="fixed top-0 left-0 right-0 z-50 border-b bg-white/90 backdrop-blur">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <div className="w-9 h-9 rounded-2xl" style={{ background: `linear-gradient(135deg, ${BRAND.colors.secondary}, ${BRAND.colors.primary})` }} />
+          <div className="w-9 h-9 rounded-2xl bg-gradient-to-br from-[#4d2db6] to-[#6436d8]" />
           <div className="leading-tight">
             <div className="font-semibold">{BRAND.name}</div>
             <div className="text-xs opacity-70">{BRAND.tagline}</div>
@@ -330,28 +330,17 @@ const Hero = () => {
 
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <a href="#courses" className="inline-block">
-                <Button size="lg" className="shadow-lg shadow-black/20">
-                  <ChevronRight className="mr-2 h-5 w-5" />
-                  Explore Modules
-                </Button>
+              <Button size="lg" className="bg-[#6436d8] hover:bg-[#5830c3] text-white shadow-lg shadow-black/20">
+              <ChevronRight className="mr-2 h-5 w-5" />Explore Module </Button>
               </a>
 
-              <a
-                href={asset('brochure/behavioral-training-brochure.pdf')}
-                target="_blank"
-                rel="noopener"
-                download
-                className="inline-block"
-              >
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="bg-white/10 backdrop-blur hover:bg-white/20 text-white border-white/40"
-                >
-                  <Download className="mr-2 h-5 w-5" />
-                  Download Course Brochure
-                </Button>
-              </a>
+
+             <a  href={asset('brochure/behavioral-training-brochure.pdf')} target="_blank" rel="noopener" download
+             className="inline-block">
+             <Button variant="outline" size="lg"  className="bg-white/10 backdrop-blur hover:bg-white/20 text-white border-white/40">   <Download className="mr-2 h-5 w-5" />
+             Download Course Brochure</Button>
+             </a>
+
             </div>
           </div>
 
@@ -362,10 +351,11 @@ const Hero = () => {
                 <CardTitle className="text-lg">Strategic Focus</CardTitle>
               </CardHeader>
               <CardContent className="grid grid-cols-3 gap-3">
-                <Pill label="Technology" />
-                <Pill label="Strategy" />
-                <Pill label="People" />
+              <Pill label="Technology" />
+              <Pill label="Strategy" />
+              <Pill label="People" tone="light" />
               </CardContent>
+
             </Card>
           </div>
         </div>
@@ -374,11 +364,19 @@ const Hero = () => {
   );
 };
 
-const Pill = ({ label }) => (
-  <div className="rounded-xl px-3 py-2 text-sm font-medium border text-center">
-    {label}
-  </div>
-);
+const Pill = ({ label, tone = 'primary' }) => {
+  const styles =
+    tone === 'accent'
+      ? 'border-[#ffd54f]/40 bg-[#ffd54f]/15 text-[#b08500]'  // yellow accent
+      : 'border-[#6436d8]/30 bg-[#6436d8]/10 text-[#6436d8]'; // purple default
+
+  return (
+    <span className={`rounded-full px-3 py-1 text-xs md:text-sm border ${styles}`}>
+      {label}
+    </span>
+  );
+};
+
 
 const About = () => (
   <Section id="about" className="py-16">
