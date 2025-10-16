@@ -10,10 +10,16 @@ import { Separator } from "@/components/ui/separator";
 import { Download, Mail, Phone, Menu, Target, Users2, BookOpen, Rocket, ShieldCheck, Waypoints, Workflow, Layers3, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
 
+
 // const asset = (rel) => new URL(rel, import.meta.env.BASE_URL).toString();
 // ...existing code...
-const asset = (rel) => `/${rel.replace(/^\/+/, "")}`;
+//const asset = (rel) => `/${rel.replace(/^\/+/, "")}`;
 // ...existing code...
+
+const asset = (rel) => {
+  const base = import.meta.env.BASE_URL || "/";
+  return `${base.replace(/\/$/, "")}/${String(rel).replace(/^\//, "")}`;
+};
 
 /**
  * Behavioral Training & Learning Solutions — Single-file React site
@@ -193,6 +199,7 @@ import yusufImg  from '@/assets/team/yusuf.jpeg';
 
 
 
+
 const TEAM = [
   {
     name: "James Okarimia",
@@ -359,9 +366,10 @@ const About = () => (
           <div className="mt-6 grid sm:grid-cols-2 lg:grid-cols-2 gap-4">
             {TEAM.map((m) => (
               <motion.div key={m.name} whileHover={{ y: -4 }} className="rounded-2xl border overflow-hidden group bg-white">
-                <div className="h-40 bg-gray-100 overflow-hidden">
-                  <img src={m.photo} alt={m.name} className="w-full h-full object-cover group-hover:scale-105 transition"/>
+                <div className="aspect-[4/3] bg-white overflow-hidden flex items-center justify-center"><img src={m.photo} alt={m.name}
+                className="max-h-full max-w-full object-contain object-center transition"/>
                 </div>
+
                 <div className="p-4">
                   <div className="font-medium">{m.name}</div>
                   <div className="text-xs text-gray-500">{m.title}</div>
