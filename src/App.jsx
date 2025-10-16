@@ -10,6 +10,9 @@ import { Separator } from "@/components/ui/separator";
 import { Download, Mail, Phone, Menu, Target, Users2, BookOpen, Rocket, ShieldCheck, Waypoints, Workflow, Layers3, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
 
+const asset = (rel) => new URL(rel, import.meta.env.BASE_URL).toString();
+
+
 /**
  * Behavioral Training & Learning Solutions — Single-file React site
  * - Modern, responsive, mobile-first
@@ -290,9 +293,9 @@ const Hero = () => {
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <a href="#courses"><Button><ChevronRight className="mr-2 h-4 w-4"/>Explore Modules</Button></a>
-              <a href="/brochure/behavioral-training-brochure.pdf" download>
-                <Button variant="outline"><Download className="mr-2 h-4 w-4"/>Download Brochure</Button>
-              </a>
+              <a href={asset('brochure/behavioral-training-brochure.pdf')}  target="_blank"   rel="noopener" download className="inline-block mt-6">
+              <Button variant="outline">  <Download className="mr-2 h-4 w-4" /> Download Course Brochure
+              </Button></a>
             </div>
           </div>
           <div className="md:justify-self-end">
@@ -517,9 +520,9 @@ const Contact = () => {
                 </div>
               ))}
             </div>
-            <a href="/brochure/behavioral-training-brochure.pdf" download className="inline-block mt-6">
-              <Button variant="outline"><Download className="mr-2 h-4 w-4"/>Download Course Brochure</Button>
-            </a>
+            <a href={asset('brochure/behavioral-training-brochure.pdf')}  target="_blank"   rel="noopener"  download
+          className="inline-block mt-6"> <Button variant="outline"> <Download className="mr-2 h-4 w-4" /> Download Course Brochure
+          </Button></a>
           </div>
           <div className="md:col-span-3">
             <Card className="rounded-2xl">
