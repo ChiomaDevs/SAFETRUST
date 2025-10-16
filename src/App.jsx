@@ -182,35 +182,35 @@ const TEAM = [
     title: "Governance, Risk & Financial Solutions (25+ yrs)",
     bio:
       "Ex-Citi Bank UK, ABN AMRO, Delta Lloyd, Fortis Bank; ex-KPMG NL, IBM GBS Benelux, Grant Thornton. MSc Financial Studies (Strathclyde). IIA (UK/USA), IMA (USA), GARP.",
-    photo: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=400&auto=format&fit=crop", // replace
+    photo: "/team/James Okarimia.jpeg",
   },
   {
     name: "Idris Oko-osi",
     title: "Head, Enterprise Risk Management, Africa Prudential",
     bio:
       "22+ yrs in banking & consulting. MBA (Leicester). ERMCP, Certified Basel II Professional. Member, CIBN ERM Community of Practice.",
-    photo: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=400&auto=format&fit=crop", // replace
+    photo: "/team/Idris Oko-osi.jpeg", 
   },
   {
     name: "Austin Agwaraonye",
     title: "Leadership & Human Capital Consultant (22+ yrs)",
     bio:
       "Ex-Diamond Bank; facilitator for First Bank, Union Bank, NNPC, Total. CIPM (Nig.), Certified Management Trainer (CIBN).",
-    photo: "https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?q=80&w=400&auto=format&fit=crop", // replace
+    photo: "/team/Austin.jpg", 
   },
   {
     name: "Obinna Opara",
     title: "Organizational Development & Learning Design",
     bio:
       "14+ yrs across financial services, consulting, oil & gas, telecom. FMC, CMS (London Graduate School). MBA; B.Sc. Computer Science.",
-    photo: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?q=80&w=400&auto=format&fit=crop", // replace
+    photo: "/team/Obinna safetrust.jpeg", 
   },
   {
     name: "Ezekiel Yusuf",
     title: "Leadership, Management & Strategy Coach",
     bio:
       "13+ yrs consulting & training across sectors. Trained by Cambridge University. CIPM. BSc Accounting & Finance; Masters International HR (Rome).",
-    photo: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=400&auto=format&fit=crop", // replace
+    photo: "/team/Yusuf.jpeg",
   },
 ];
 
