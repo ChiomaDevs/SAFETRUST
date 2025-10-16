@@ -10,6 +10,13 @@ import { Separator } from "@/components/ui/separator";
 import { Download, Mail, Phone, Menu, Target, Users2, BookOpen, Rocket, ShieldCheck, Waypoints, Workflow, Layers3, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
 
+import jamesImg  from '@/assets/team/james.jpeg';
+import idrisImg  from '@/assets/team/idris.jpeg';
+import austinImg from '@/assets/team/austin.jpeg';
+import obinnaImg from '@/assets/team/obinna.jpeg';
+import yusufImg  from '@/assets/team/yusuf.jpeg';
+import landingHero from '@/assets/hero/landing.jpg';
+
 
 // const asset = (rel) => new URL(rel, import.meta.env.BASE_URL).toString();
 // ...existing code...
@@ -55,6 +62,8 @@ const BRAND = {
     accent: "#F59E0B", // Amber — People/Energy
   },
 };
+
+
 
 const VISION = "To become the benchmark for unparalleled quality consulting solutions in our chosen industry.";
 const MISSION = "Leveraging our expertise, technology and best practices to provide strategic solutions to our clients, facilitating business transformation and optimal returns to clients and stakeholders.";
@@ -189,11 +198,6 @@ const METHODOLOGY = [
 
 
 
-import jamesImg  from '@/assets/team/james.jpeg';
-import idrisImg  from '@/assets/team/idris.jpeg';
-import austinImg from '@/assets/team/austin.jpeg';
-import obinnaImg from '@/assets/team/obinna.jpeg';
-import yusufImg  from '@/assets/team/yusuf.jpeg';
 
 
 
@@ -291,38 +295,82 @@ const StickyNav = () => {
 
 const Hero = () => {
   return (
-    <div className="pt-20">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-2 gap-8 items-center">
+    <section className="relative isolate overflow-hidden">
+      {/* Background image */}
+      <img
+        src={asset('hero/landing.jpg')}
+        alt=""
+        className="absolute inset-0 h-full w-full object-cover"
+        loading="eager"
+        fetchpriority="high"
+      />
+
+      {/* Dark scrim + soft gradient for text contrast */}
+      <div className="absolute inset-0 bg-black/50" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/60" />
+
+      {/* Content */}
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-28 md:py-44 text-white">
+        <div className="grid md:grid-cols-2 gap-10 items-start">
+          {/* Left: headline + actions */}
           <div>
-            <motion.h1 initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="text-3xl sm:text-4xl font-bold leading-tight">
-              Transforming Performance with Behavioral Training
+            <motion.h1
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]"
+            >
+              Transforming Performance with <span className="opacity-95">Behavioral Training</span>
             </motion.h1>
-            <p className="mt-4 text-gray-600">
-              We partner with organizations to co-create practical learning experiences that deliver measurable outcomes and long-term cultural impact.
+
+            <p className="mt-5 max-w-2xl text-base md:text-lg text-white/90">
+              We partner with organizations to co-create practical learning experiences that deliver measurable
+              outcomes and long-term cultural impact.
             </p>
-            <div className="mt-6 flex flex-wrap gap-3">
-              <a href="#courses"><Button><ChevronRight className="mr-2 h-4 w-4"/>Explore Modules</Button></a>
-              <a href={asset('brochure/behavioral-training-brochure.pdf')}  target="_blank"   rel="noopener" download className="inline-block mt-6">
-              <Button variant="outline">  <Download className="mr-2 h-4 w-4" /> Download Course Brochure
-              </Button></a>
+
+            <div className="mt-8 flex flex-wrap items-center gap-3">
+              <a href="#courses" className="inline-block">
+                <Button size="lg" className="shadow-lg shadow-black/20">
+                  <ChevronRight className="mr-2 h-5 w-5" />
+                  Explore Modules
+                </Button>
+              </a>
+
+              <a
+                href={asset('brochure/behavioral-training-brochure.pdf')}
+                target="_blank"
+                rel="noopener"
+                download
+                className="inline-block"
+              >
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="bg-white/10 backdrop-blur hover:bg-white/20 text-white border-white/40"
+                >
+                  <Download className="mr-2 h-5 w-5" />
+                  Download Course Brochure
+                </Button>
+              </a>
             </div>
           </div>
+
+          {/* Right: strategic focus card (floats on image) */}
           <div className="md:justify-self-end">
-            <Card className="rounded-2xl shadow-lg">
+            <Card className="rounded-2xl shadow-2xl bg-white/90 backdrop-blur border-white/60">
               <CardHeader>
                 <CardTitle className="text-lg">Strategic Focus</CardTitle>
               </CardHeader>
               <CardContent className="grid grid-cols-3 gap-3">
-                <Pill label="Technology"/>
-                <Pill label="Strategy"/>
-                <Pill label="People"/>
+                <Pill label="Technology" />
+                <Pill label="Strategy" />
+                <Pill label="People" />
               </CardContent>
             </Card>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
