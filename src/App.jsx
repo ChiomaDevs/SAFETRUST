@@ -176,41 +176,45 @@ const METHODOLOGY = [
   },
 ];
 
+// builds the correct path like /<repo>/team/filename.ext
+const asset = (rel) => new URL(rel, import.meta.env.BASE_URL).toString();
+
+
 const TEAM = [
   {
     name: "James Okarimia",
     title: "Governance, Risk & Financial Solutions (25+ yrs)",
     bio:
       "Ex-Citi Bank UK, ABN AMRO, Delta Lloyd, Fortis Bank; ex-KPMG NL, IBM GBS Benelux, Grant Thornton. MSc Financial Studies (Strathclyde). IIA (UK/USA), IMA (USA), GARP.",
-    photo: "/team/James Okarimia.jpeg",
+    photo: asset("/team/james.jpeg"),
   },
   {
     name: "Idris Oko-osi",
     title: "Head, Enterprise Risk Management, Africa Prudential",
     bio:
       "22+ yrs in banking & consulting. MBA (Leicester). ERMCP, Certified Basel II Professional. Member, CIBN ERM Community of Practice.",
-    photo: "/team/Idris Oko-osi.jpeg", 
+    photo: asset("/team/idris.jpeg"), 
   },
   {
     name: "Austin Agwaraonye",
     title: "Leadership & Human Capital Consultant (22+ yrs)",
     bio:
       "Ex-Diamond Bank; facilitator for First Bank, Union Bank, NNPC, Total. CIPM (Nig.), Certified Management Trainer (CIBN).",
-    photo: "/team/Austin.jpg", 
+    photo: asset("/team/austin.jpeg"), 
   },
   {
     name: "Obinna Opara",
     title: "Organizational Development & Learning Design",
     bio:
       "14+ yrs across financial services, consulting, oil & gas, telecom. FMC, CMS (London Graduate School). MBA; B.Sc. Computer Science.",
-    photo: "/team/Obinna safetrust.jpeg", 
+    photo: asset("/team/obinna.jpeg"), 
   },
   {
     name: "Ezekiel Yusuf",
     title: "Leadership, Management & Strategy Coach",
     bio:
       "13+ yrs consulting & training across sectors. Trained by Cambridge University. CIPM. BSc Accounting & Finance; Masters International HR (Rome).",
-    photo: "/team/Yusuf.jpeg",
+    photo: asset("/team/yusuf.jpeg"),
   },
 ];
 
