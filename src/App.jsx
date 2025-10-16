@@ -262,8 +262,12 @@ const StickyNav = () => {
         <div className="flex items-center gap-3">
           <div className="w-9 h-9 rounded-2xl bg-gradient-to-br from-[#4d2db6] to-[#6436d8]" />
           <div className="leading-tight">
-            <div className="font-semibold">{BRAND.name}</div>
-            <div className="text-xs opacity-70">{BRAND.tagline}</div>
+            {/* BRAND: image wordmark */}
+            <a href="#" className="flex items-center gap-3">
+            <img src={asset('logo/logo.png')}alt="Safetrust Consulting Services" className="h-8 md:h-10 w-auto" loading="eager"
+            fetchpriority="high"/>
+            </a>
+
           </div>
         </div>
         <nav className="hidden md:flex items-center gap-1">
