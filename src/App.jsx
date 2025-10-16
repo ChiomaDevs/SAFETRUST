@@ -10,8 +10,10 @@ import { Separator } from "@/components/ui/separator";
 import { Download, Mail, Phone, Menu, Target, Users2, BookOpen, Rocket, ShieldCheck, Waypoints, Workflow, Layers3, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
 
-const asset = (rel) => new URL(rel, import.meta.env.BASE_URL).toString();
-
+// const asset = (rel) => new URL(rel, import.meta.env.BASE_URL).toString();
+// ...existing code...
+const asset = (rel) => `/${rel.replace(/^\/+/, "")}`;
+// ...existing code...
 
 /**
  * Behavioral Training & Learning Solutions — Single-file React site
@@ -186,6 +188,7 @@ import idrisImg  from '@/assets/team/idris.jpeg';
 import austinImg from '@/assets/team/austin.jpeg';
 import obinnaImg from '@/assets/team/obinna.jpeg';
 import yusufImg  from '@/assets/team/yusuf.jpeg';
+
 
 
 
