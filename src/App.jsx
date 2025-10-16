@@ -176,8 +176,15 @@ const METHODOLOGY = [
   },
 ];
 
-// builds the correct path like /<repo>/team/filename.ext
-const asset = (rel) => new URL(rel, import.meta.env.BASE_URL).toString();
+
+
+import jamesImg  from '@/assets/team/james.jpeg';
+import idrisImg  from '@/assets/team/idris.jpeg';
+import austinImg from '@/assets/team/austin.jpeg';
+import obinnaImg from '@/assets/team/obinna.jpeg';
+import yusufImg  from '@/assets/team/yusuf.jpeg';
+
+
 
 
 const TEAM = [
@@ -186,35 +193,35 @@ const TEAM = [
     title: "Governance, Risk & Financial Solutions (25+ yrs)",
     bio:
       "Ex-Citi Bank UK, ABN AMRO, Delta Lloyd, Fortis Bank; ex-KPMG NL, IBM GBS Benelux, Grant Thornton. MSc Financial Studies (Strathclyde). IIA (UK/USA), IMA (USA), GARP.",
-    photo: asset("/team/james.jpeg"),
+    photo: jamesImg
   },
   {
     name: "Idris Oko-osi",
     title: "Head, Enterprise Risk Management, Africa Prudential",
     bio:
       "22+ yrs in banking & consulting. MBA (Leicester). ERMCP, Certified Basel II Professional. Member, CIBN ERM Community of Practice.",
-    photo: asset("/team/idris.jpeg"), 
+    photo: idrisImg 
   },
   {
     name: "Austin Agwaraonye",
     title: "Leadership & Human Capital Consultant (22+ yrs)",
     bio:
       "Ex-Diamond Bank; facilitator for First Bank, Union Bank, NNPC, Total. CIPM (Nig.), Certified Management Trainer (CIBN).",
-    photo: asset("/team/austin.jpeg"), 
+    photo: austinImg
   },
   {
     name: "Obinna Opara",
     title: "Organizational Development & Learning Design",
     bio:
       "14+ yrs across financial services, consulting, oil & gas, telecom. FMC, CMS (London Graduate School). MBA; B.Sc. Computer Science.",
-    photo: asset("/team/obinna.jpeg"), 
+    photo: obinnaImg
   },
   {
     name: "Ezekiel Yusuf",
     title: "Leadership, Management & Strategy Coach",
     bio:
       "13+ yrs consulting & training across sectors. Trained by Cambridge University. CIPM. BSc Accounting & Finance; Masters International HR (Rome).",
-    photo: asset("/team/yusuf.jpeg"),
+    photo: yusufImg
   },
 ];
 
